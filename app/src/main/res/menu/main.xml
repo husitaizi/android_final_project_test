@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuWorkout"
+        android:icon="@drawable/ic_workout"
+        android:title="@string/workout_management" />
+    <item
+        android:id="@+id/menuReminder"
+        android:icon="@drawable/ic_reminder"
+        android:title="@string/Reminder_Setting" />
+    <item
+        android:id="@+id/menuSpecialInfo"
+        android:icon="@drawable/ic_special_info"
+        android:title="@string/special_infos" />
+    <item
+        android:id="@+id/menuOnlineResources"
+        android:icon="@drawable/ic_online_resources"
+        android:title="@string/online_resources" />
+
+
+</menu>

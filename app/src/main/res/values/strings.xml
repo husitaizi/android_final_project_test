@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WorkoutFinalproject_Exprimental</string>
+    <string name="workout_management">Workout Management</string>
+    <string name="Reminder_Setting">Reminder Setting</string>
+    <string name="special_infos">Special Infos</string>
+    <string name="online_resources">Online Resources</string>
+    <string name="edit">Edit</string>
+    <string name="add_note">Add Note</string>
+    <string name="delete">Delete</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>
