@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigate_run"
+    app:startDestination="@id/workoutFragment2">
+    <fragment
+        android:id="@+id/workoutFragment2"
+        android:name="project.stn991602827.chuantai.WorkoutFragment"
+        android:label="WorkoutFragment" >
+        <action
+            android:id="@+id/action_workoutFragment2_to_managerunFragment2"
+            app:destination="@id/managerunFragment2" />
+        <action
+            android:id="@+id/action_workoutFragment2_to_managedietFragment3"
+            app:destination="@id/managedietFragment3" />
+        <action
+            android:id="@+id/action_workoutFragment2_to_fragmentManagejumping"
+            app:destination="@id/fragmentManagejumping" />
+    </fragment>
+    <fragment
+        android:id="@+id/managedietFragment3"
+        android:name="project.stn991602827.chuantai.manageworkout.ManagedietFragment"
+        android:label="fragment_managediet"
+        tools:layout="@layout/fragment_managediet" />
+    <fragment
+        android:id="@+id/fragmentManagejumping"
+        android:name="project.stn991602827.chuantai.manageworkout.ManagejumpingFragment"
+        android:label="fragment_managejumping"
+        tools:layout="@layout/fragment_managejumping" />
+    <fragment
+        android:id="@+id/managerunFragment2"
+        android:name="project.stn991602827.chuantai.manageworkout.ManagerunFragment"
+        android:label="fragment_managerun"
+        tools:layout="@layout/fragment_managerun" >
+        <action
+            android:id="@+id/action_managerunFragment2_to_editrunFragment"
+            app:destination="@id/editrunFragment" />
+        <argument
+            android:name="addOrUpdate"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/editrunFragment"
+        android:name="project.stn991602827.chuantai.EditrunFragment"
+        android:label="fragment_editrun"
+        tools:layout="@layout/fragment_editrun" >
+        <action
+            android:id="@+id/action_editrunFragment_to_managerunFragment2"
+            app:destination="@id/managerunFragment2" />
+        <argument
+            android:name="runningID"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="addOrUpdate"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+</navigation>

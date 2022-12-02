@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="project.stn991602827.chuantai.viewmodel.EditrunViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".EditrunFragment">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/date_time_picker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+
+                    android:src="@drawable/ic_date_picker2" />
+
+                <TextView
+                    android:id="@+id/date_time_chosen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:text="example:2013-03-31\n12:30:00"
+                    android:textAlignment="center"
+                    tools:text="@tools:sample/date/ddmmyy" />
+
+                <!--                <DatePicker
+                                    android:id="@+id/date_picker"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <TimePicker
+                                    android:id="@+id/time_picker"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/event_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5 km running" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/input_distance_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="Set your distance goal (km): @{}"
+                        android:textAlignment="center" />
+
+                    <com.shawnlin.numberpicker.NumberPicker
+                        android:id="@+id/input_distance_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:np_width="64dp"
+                        app:np_height="180dp"
+                        app:np_dividerColor="@color/colorPrimary"
+                        app:np_max="42"
+                        app:np_min="0"
+                        app:np_selectedTextColor="@color/colorPrimary"
+                        app:np_selectedTextSize="30dp"
+                        app:np_textColor="@color/colorPrimary"
+                        app:np_textSize="20dp"
+                        app:np_value="5"
+                        app:np_wheelItemCount="5"
+                        app:np_itemSpacing="5dp"
+                        app:np_wrapSelectorWheel="true"/>
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_planARun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="25dp"
+                    android:padding="2dp"
+                    android:text="Plan A Run" />
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </FrameLayout>
+</layout>
