@@ -11,7 +11,7 @@ data class Diet(
     @PrimaryKey(autoGenerate = true) val id:Int,
     @ColumnInfo(name = "food") val food:String,
     @ColumnInfo(name = "calories") val calories:Int,
-    @ColumnInfo(name = "data") val date: Date,
- //   @ColumnInfo(name = "time") val time: Time
+    @ColumnInfo(name = "date") val date: Date,
+    @ColumnInfo(name = "time") val time: Time
 ) {
 }

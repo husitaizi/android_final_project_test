@@ -22,8 +22,8 @@ interface RunDao {
     @Update
     fun updateRun(run:Run)
 
-    // get the last 10 runs's sum(distance)
-    @Query("SELECT  SUM(distance) from running ORDER BY date DESC LIMIT :num")
+    // get the last 10 runs's sum(calories)
+    @Query("SELECT  SUM(calories) from running ORDER BY date DESC LIMIT :num")
     fun getTotal(num:Int):LiveData<Int>
 
 

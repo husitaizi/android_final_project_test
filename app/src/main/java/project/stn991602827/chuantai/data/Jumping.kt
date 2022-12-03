@@ -10,8 +10,8 @@ import java.sql.Time
 @Entity(tableName = "rope_jumping")
 data class Jumping(
     @PrimaryKey(autoGenerate = true) val id: Int,
-    @ColumnInfo(name = "data") val date: Date,
-  //  @ColumnInfo(name = "time") val time:Time,
-    @ColumnInfo(name = "count") val count:Int
+    @ColumnInfo(name = "date") val date: Date,
+    @ColumnInfo(name = "time") val time:Time,
+    @ColumnInfo(name = "calories") val count:Int
 ) {
 }

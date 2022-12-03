@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import project.stn991602827.chuantai.R
 import project.stn991602827.chuantai.adapter.RunAdapter
@@ -28,7 +27,7 @@ class ManagerunFragment : Fragment() {
 
     private lateinit var binding: FragmentManagerunBinding
     private lateinit var viewModel: ManagerunViewModel
-    private val args: ManagerunFragmentArgs by navArgs()
+   // private val args: ManagerunFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,7 +38,7 @@ class ManagerunFragment : Fragment() {
 
 
         // retrieve the argument passed or default
-        val isChanged = args.addOrUpdate
+       // val isChanged = args.addOrUpdate
 
 
         // initialize mDB
@@ -60,14 +59,6 @@ class ManagerunFragment : Fragment() {
         binding.btnEditrun.setOnClickListener {
             it.findNavController().navigate(R.id.action_managerunFragment2_to_editrunFragment)
         }
-
-
-
-
-/*        // initialize viewModel reference to the class example using ViewModelFactory with parameters
-        viewModel = ViewModelProvider(this).get(ManagerunViewModel(mDB.runDao(), application)::class.java)*/
-
-        // get run data from database/ done in viewModel Coroutine operation
 
 
 

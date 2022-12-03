@@ -1,13 +1,12 @@
 package project.stn991602827.chuantai
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import project.stn991602827.chuantai.databinding.ActivityMainBinding
 import project.stn991602827.chuantai.databinding.FragmentWorkoutBinding
 
 
@@ -34,8 +33,8 @@ class WorkoutFragment : Fragment() {
         binding.ropeJumpingImage.setOnClickListener{
             it.findNavController().navigate(R.id.action_workoutFragment2_to_fragmentManagejumping)
         }
-        binding.runningImage.setOnClickListener{
-            it.findNavController().navigate(R.id.action_workoutFragment2_to_managerunFragment2)
+        binding.dietingImage.setOnClickListener{
+            it.findNavController().navigate(R.id.action_workoutFragment2_to_managedietFragment3)
         }
 
 

@@ -22,12 +22,20 @@
         android:id="@+id/managedietFragment3"
         android:name="project.stn991602827.chuantai.manageworkout.ManagedietFragment"
         android:label="fragment_managediet"
-        tools:layout="@layout/fragment_managediet" />
+        tools:layout="@layout/fragment_managediet" >
+        <action
+            android:id="@+id/action_managedietFragment3_to_editdietFragment"
+            app:destination="@id/editdietFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentManagejumping"
         android:name="project.stn991602827.chuantai.manageworkout.ManagejumpingFragment"
         android:label="fragment_managejumping"
-        tools:layout="@layout/fragment_managejumping" />
+        tools:layout="@layout/fragment_managejumping" >
+        <action
+            android:id="@+id/action_fragmentManagejumping_to_editjumpFragment"
+            app:destination="@id/editjumpFragment" />
+    </fragment>
     <fragment
         android:id="@+id/managerunFragment2"
         android:name="project.stn991602827.chuantai.manageworkout.ManagerunFragment"
@@ -43,7 +51,7 @@
     </fragment>
     <fragment
         android:id="@+id/editrunFragment"
-        android:name="project.stn991602827.chuantai.EditrunFragment"
+        android:name="project.stn991602827.chuantai.manageworkout.EditrunFragment"
         android:label="fragment_editrun"
         tools:layout="@layout/fragment_editrun" >
         <action
@@ -54,8 +62,56 @@
             app:argType="integer"
             android:defaultValue="0" />
         <argument
-            android:name="addOrUpdate"
+            android:name="isUpdate"
             app:argType="boolean"
-            android:defaultValue="true" />
+            android:defaultValue="false" />
+        <argument
+            android:name="run"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+    <fragment
+        android:id="@+id/editjumpFragment"
+        android:name="project.stn991602827.chuantai.manageworkout.EditjumpFragment"
+        android:label="EditjumpFragment" >
+        <action
+            android:id="@+id/action_editjumpFragment_to_fragmentManagejumping"
+            app:destination="@id/fragmentManagejumping" />
+        <argument
+            android:name="update"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="jumpID"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="jump"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+    <fragment
+        android:id="@+id/editdietFragment"
+        android:name="project.stn991602827.chuantai.manageworkout.EditdietFragment"
+        android:label="EditdietFragment" >
+        <action
+            android:id="@+id/action_editdietFragment_to_managedietFragment3"
+            app:destination="@id/managedietFragment3" />
+        <argument
+            android:name="isUpdate"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="dietID"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="strArgs"
+            app:argType="string"
+            android:defaultValue='"0"' />
+        <argument
+            android:name="food"
+            app:argType="string"
+            android:defaultValue='""' />
     </fragment>
 </navigation>

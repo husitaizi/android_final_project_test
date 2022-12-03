@@ -13,7 +13,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".EditrunFragment">
+        tools:context=".manageworkout.EditrunFragment">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -46,17 +46,7 @@
                     android:textAlignment="center"
                     tools:text="@tools:sample/date/ddmmyy" />
 
-                <!--                <DatePicker
-                                    android:id="@+id/date_picker"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1" />
 
-                                <TimePicker
-                                    android:id="@+id/time_picker"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1" />-->
             </LinearLayout>
 
             <LinearLayout
@@ -65,12 +55,6 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-
-                <TextView
-                    android:id="@+id/event_detail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="5 km running" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -85,7 +69,7 @@
                         android:layout_marginRight="10dp"
                         android:gravity="center"
                         android:paddingRight="10dp"
-                        android:text="Set your distance goal (km): @{}"
+                        android:text="Set your distance goal (KM): "
                         android:textAlignment="center" />
 
                     <com.shawnlin.numberpicker.NumberPicker

@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.lifecycle.Transformations
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.listitem_run.view.*
@@ -40,15 +39,16 @@ class RunAdapter(private val runList: List<Run>,
     override fun onBindViewHolder(holder: RunViewHolder, position: Int) {
         val currentItem = runList[position]
 
-        holder.dateTime.text=currentItem.date.toString()
-        holder.distance.text=currentItem.distance.toString()
+        holder.dateTime.text=currentItem.date.toString()+"\n" +currentItem.time.toString()
+        holder.distance.text=currentItem.distance.toString()+" \nKM"
         // if update button is clicked, go to edit run
         holder.btn_update.setOnClickListener{
+            var run=currentItem.date.toString()+currentItem.time.toString()+currentItem.distance.toString()
             it.findNavController().navigate(
-                ManagerunFragmentDirections.actionManagerunFragment2ToEditrunFragment(currentItem.id,false))
+                ManagerunFragmentDirections.actionManagerunFragment2ToEditrunFragment(currentItem.id,true,run))
         }
         holder.btn_delete.setOnClickListener{
-            viewModel.runDao.delete(currentItem)
+            viewModel.delete(currentItem)
 
         }
     }

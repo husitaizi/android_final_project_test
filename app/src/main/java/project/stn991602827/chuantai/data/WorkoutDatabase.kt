@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 
-@Database(entities = [Run::class,Jumping::class,Diet::class], version = 1, exportSchema = false)
+@Database(entities = [Run::class,Jumping::class,Diet::class], version = 4, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class WorkoutDatabase:RoomDatabase() {
     abstract fun runDao():RunDao
@@ -19,11 +19,19 @@ abstract class WorkoutDatabase:RoomDatabase() {
         private var INSTANCE:WorkoutDatabase?=null
 
         fun getInstance(context: Context):WorkoutDatabase{
-            if(INSTANCE==null){
-                INSTANCE =
-                    Room.databaseBuilder(context,WorkoutDatabase::class.java,"workout").allowMainThreadQueries().build()
+            synchronized(this){
+            var instance = INSTANCE
+
+            if(instance==null){
+                instance =
+                    Room.databaseBuilder(
+                        context.applicationContext,
+                        WorkoutDatabase::class.java,"workout")
+                        .fallbackToDestructiveMigration()
+                        .build()
             }
-            return INSTANCE as WorkoutDatabase
+            return instance
+            }
         }
 
     }

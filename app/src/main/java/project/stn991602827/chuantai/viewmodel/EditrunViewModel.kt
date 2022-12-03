@@ -6,7 +6,9 @@ import kotlinx.coroutines.*
 import project.stn991602827.chuantai.data.Run
 import project.stn991602827.chuantai.data.RunDao
 
-class EditrunViewModel(private val runDao: RunDao,private val application: Application) : ViewModel() {
+class EditrunViewModel(
+    private val runDao: RunDao,
+    private val application: Application) : ViewModel() {
     // TODO: Implement the ViewModel
     // need a runDao to work on
     private var viewModelJob = Job()
