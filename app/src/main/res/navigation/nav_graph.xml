@@ -3,24 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigate_run"
-    app:startDestination="@id/workoutFragment2">
-    <fragment
-        android:id="@+id/workoutFragment2"
-        android:name="project.stn991602827.chuantai.WorkoutFragment"
-        android:label="WorkoutFragment" >
-        <action
-            android:id="@+id/action_workoutFragment2_to_managerunFragment2"
-            app:destination="@id/managerunFragment2" />
-        <action
-            android:id="@+id/action_workoutFragment2_to_managedietFragment3"
-            app:destination="@id/managedietFragment3" />
-        <action
-            android:id="@+id/action_workoutFragment2_to_fragmentManagejumping"
-            app:destination="@id/fragmentManagejumping" />
-    </fragment>
+    app:startDestination="@id/viewpagerStartPageFragment">
     <fragment
         android:id="@+id/managedietFragment3"
-        android:name="project.stn991602827.chuantai.manageworkout.ManagedietFragment"
+        android:name="project.stn991602827stn991579365.chuantaiAndJunxiu.manageworkout.ManagedietFragment"
         android:label="fragment_managediet"
         tools:layout="@layout/fragment_managediet" >
         <action
@@ -29,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentManagejumping"
-        android:name="project.stn991602827.chuantai.manageworkout.ManagejumpingFragment"
+        android:name="project.stn991602827stn991579365.chuantaiAndJunxiu.manageworkout.ManagejumpingFragment"
         android:label="fragment_managejumping"
         tools:layout="@layout/fragment_managejumping" >
         <action
@@ -38,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/managerunFragment2"
-        android:name="project.stn991602827.chuantai.manageworkout.ManagerunFragment"
+        android:name="project.stn991602827stn991579365.chuantaiAndJunxiu.manageworkout.ManagerunFragment"
         android:label="fragment_managerun"
         tools:layout="@layout/fragment_managerun" >
         <action
@@ -51,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/editrunFragment"
-        android:name="project.stn991602827.chuantai.manageworkout.EditrunFragment"
+        android:name="project.stn991602827stn991579365.chuantaiAndJunxiu.manageworkout.EditrunFragment"
         android:label="fragment_editrun"
         tools:layout="@layout/fragment_editrun" >
         <action
@@ -72,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/editjumpFragment"
-        android:name="project.stn991602827.chuantai.manageworkout.EditjumpFragment"
+        android:name="project.stn991602827stn991579365.chuantaiAndJunxiu.manageworkout.EditjumpFragment"
         android:label="EditjumpFragment" >
         <action
             android:id="@+id/action_editjumpFragment_to_fragmentManagejumping"
@@ -92,7 +78,7 @@
     </fragment>
     <fragment
         android:id="@+id/editdietFragment"
-        android:name="project.stn991602827.chuantai.manageworkout.EditdietFragment"
+        android:name="project.stn991602827stn991579365.chuantaiAndJunxiu.manageworkout.EditdietFragment"
         android:label="EditdietFragment" >
         <action
             android:id="@+id/action_editdietFragment_to_managedietFragment3"
@@ -114,4 +100,22 @@
             app:argType="string"
             android:defaultValue='""' />
     </fragment>
+    <fragment
+        android:id="@+id/viewpagerStartPageFragment"
+        android:name="project.stn991602827stn991579365.chuantaiAndJunxiu.viewpager.ViewpagerStartPageFragment"
+        android:label="ViewpagerStartPageFragment" >
+        <action
+            android:id="@+id/action_viewpagerStartPageFragment_to_fragmentManagejumping"
+            app:destination="@id/fragmentManagejumping" />
+        <action
+            android:id="@+id/action_viewpagerStartPageFragment_to_managerunFragment2"
+            app:destination="@id/managerunFragment2" />
+        <action
+            android:id="@+id/action_viewpagerStartPageFragment_to_managerunFragment22"
+            app:destination="@id/managerunFragment2" />
+        <action
+            android:id="@+id/action_viewpagerStartPageFragment_to_managedietFragment3"
+            app:destination="@id/managedietFragment3" />
+    </fragment>
+
 </navigation>

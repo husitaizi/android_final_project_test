@@ -77,6 +77,18 @@
                 tools:layout_editor_absoluteY="198dp" />
 
         </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:dividerThickness="2dp"
+            app:dividerInsetStart="8dp"
+            app:dividerInsetEnd="8dp"
+            app:dividerColor="@color/colorAccent"
+            />
 
         <LinearLayout
             android:id="@+id/linearLayout2"

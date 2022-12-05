@@ -5,9 +5,6 @@
 
     <data>
 
-        <variable
-            name="viewModel"
-            type="project.stn991602827.chuantai.viewmodel.EditrunViewModel" />
     </data>
 
     <FrameLayout

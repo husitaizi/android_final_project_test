@@ -13,16 +13,15 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         tools:openDrawer="start"
-
         >
-
-        <include
-            android:id="@+id/app_bar_main"
-            layout="@layout/app_bar_main"
+        <fragment
+            android:id="@+id/navHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            />
-
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph" >
+        </fragment>
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/nav_view"
@@ -33,6 +32,44 @@
             android:paddingTop="64dp"
             app:itemIconTint="@android:color/black"
             app:menu="@menu/main" />
+<!--        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/fragment_viewpager"/>-->
+
+<!--        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp"
+            android:orientation="horizontal"
+            android:layoutDirection="ltr"
+            />-->
+
+
+
+<!--        <include
+            android:id="@+id/app_bar_main"
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />-->
+<!--        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/navigation"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph"
+            tools:layout="@layout/app_bar_main" />-->
+
+
+
+
+
 
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

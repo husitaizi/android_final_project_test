@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace 'project.stn991602827.chuantai'
+    namespace 'project.stn991602827stn991579365.chuantaiAndJunxiu'
     compileSdk 32
 
     defaultConfig {
@@ -33,13 +33,16 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
+    buildFeatures {
         dataBinding true
     }
 }
 
 dependencies {
 
+    //viewpager
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    // numberpicker dependency
     implementation 'io.github.ShawnLin013:number-picker:2.4.13'
     // recyclerview cardview
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
@@ -58,7 +61,7 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:$room_version")
 
     // To use Kotlin annotation processing tool (kapt)
-    kapt ("androidx.room:room-compiler:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
 /*    // To use Kotlin Symbol Processing (KSP)
     ksp("androidx.room:room-compiler:$room_version")*/
 
